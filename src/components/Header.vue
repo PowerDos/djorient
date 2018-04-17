@@ -1,6 +1,6 @@
 <template>
   <div>
-    <flexbox :justify="space-between" :align="center">
+    <flexbox justify="space-between" align="center">
       <flexbox-item >
         <i class="iconfont icon-shangyige"></i>
       </flexbox-item>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper loop auto show-dots=false show-desc-mask=false dots-position="center" :list="list" :index="list" :aspect-ratio="1000/800"></swiper>
+    <swiper loop auto :show-desc-mask=false :show-dots=false :list="list" :index="list" :aspect-ratio="1000/800"></swiper>
   </div>
 </template>
 
@@ -39,3 +39,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.vux-indicator.custom-bottom {
+  bottom: 30px;
+}
+</style>
