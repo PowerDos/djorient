@@ -5,7 +5,7 @@
         <i class="iconfont icon-shangyige"></i>
       </flexbox-item>
       <flexbox-item :span="8">
-        <img src="../assets/img/logo_white.png" alt="logo" class="header-logo">
+        <img src="static/img/logo_white.png" alt="logo" class="header-logo">
       </flexbox-item>
       <flexbox-item >
         <i class="iconfont icon-yonghu"></i>

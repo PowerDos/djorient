@@ -13,22 +13,22 @@ export default {
       list: [
         {
           url: 'javascript:',
-          img: require('../assets/img/home/identification_c.jpg'),
+          img: 'static/img/home/identification_c.jpg',
           title: '证件照'
         },
         {
           url: 'javascript:',
-          img: require('../assets/img/home/personal_c.jpg'),
+          img: 'static/img/home/personal_c.jpg',
           title: '证件照'
         },
         {
           url: 'javascript:',
-          img: require('../assets/img/home/pressional_c.jpg'),
+          img: 'static/img/home/pressional_c.jpg',
           title: '证件照'
         },
         {
           url: 'javascript:',
-          img: require('../assets/img/home/marry_c.jpg'),
+          img: 'static/img/home/marry_c.jpg',
           title: '证件照'
         }
       ]
