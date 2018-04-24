@@ -4,7 +4,7 @@
     <div :class="enterBoxClass">
       <div class="enter-container">
         <p :class="[ isAction ? enterTitleAction : enterTitle ]" @click="showMore">这里是预约入口<i :class="[iconfont, isAction ? iconDown : iconLeft ]"></i></p>
-        <div class="line"></div>
+        <div :class="[isAction ? lineAction : line]"></div>
         <collapse-transition>
             <div class="select-box" v-show="isAction"></div>
         </collapse-transition>
@@ -27,6 +27,8 @@ export default {
       iconfont: 'iconfont',
       iconLeft: 'icon-shangyige',
       iconDown: 'icon-moreunfold',
+      line: 'line',
+      lineAction: 'line-action',
       isAction: false,
       list: [
         {
@@ -54,10 +56,13 @@ export default {
   },
   methods: {
     showMore () {
-      this.enterBoxClass = this.enterBoxClass === 'enter-box' ? 'enter-box-action' : 'enter-box'
-      let anchor = this.$el.querySelector('test')
+      const father = this
+      // this.enterBoxClass = this.enterBoxClass === 'enter-box' ? 'enter-box-action' : 'enter-box'
+      const time = this.isAction ? 500 : 0
       this.isAction = !this.isAction
-      console.log(anchor)
+      setTimeout(() => {
+        father.enterBoxClass = father.enterBoxClass === 'enter-box' ? 'enter-box-action' : 'enter-box'
+      }, time)
       console.log(this.$refs.swiper.xheight)
       console.log(this.$refs.swiper.$el.offsetTop)
       console.log(document.documentElement.clientHeight)
@@ -79,7 +84,7 @@ export default {
   height: calc(100vh - 1033.5px);
   color: #232323;
   background: #ccc;
-  transition-duration: 1s;
+  transition-duration: .5s;
   transition-property: all;
 }
 .enter-box-action {
@@ -89,7 +94,7 @@ export default {
   width: 100%;
   height: calc(100vh - 903.5px);
   background: #ccc;
-  transition-duration: 1s;
+  transition-duration: .5s;
   transition-property: all;
 }
 .enter-container {
@@ -111,10 +116,22 @@ export default {
   transition-property: line-height;
 }
 .line {
+  margin-left: 50%;
+  margin-bottom: 15px;
+  width: 0%;
+  height: 3px;
+  background-color: #232323;
+  transition-duration: 1s;
+  transition-property: all;
+}
+.line-action {
+  margin-left: 0%;
   margin-bottom: 15px;
   width: 100%;
-  height: 5px;
+  height: 3px;
   background-color: #232323;
+  transition-duration: 1s;
+  transition-property: all;
 }
 .select-box {
   width: 100%;
